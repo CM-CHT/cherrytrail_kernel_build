@@ -250,12 +250,12 @@ git_build_kernel() {
 
 	# block kernel build from marking the build as "dirty"
 	pushd $KPATH || die "git_build_kernel: Cannot cd to $KPATH: $?"
-	chmod 0 .git || die "git_build_kernel: Failed to chmod 0 .git: $?"
+	#chmod 0 .git || die "git_build_kernel: Failed to chmod 0 .git: $?"
 
 	build_kernel $arch $config $kimage
 
 	#put things back the way the should be
-	chmod 775 .git || die "git_build_kernel: Failed to chmod 775 .git: $?"
+	#chmod 775 .git || die "git_build_kernel: Failed to chmod 775 .git: $?"
 	popd
 }
 
