@@ -177,7 +177,7 @@ if [ "$OPT_arch" != "x86_64" ] && \
 	exit_usage 1
 fi
 
-if ! $OPT_compile_only || [ ! -d $KPATH/.git ]; then
+if ! $OPT_compile_only || [ ! -f $KPATH/.git ]; then
 	kernel_init false
 fi
 
