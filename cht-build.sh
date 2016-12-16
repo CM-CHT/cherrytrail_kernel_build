@@ -126,10 +126,10 @@ build_cht() {
 		$TOP/uefi/cht/modules/perftools-external/vtunedk/src/pax \
 		$TOP/uefi/cht/modules/realtek
 
-	build_fedcore $arch $TOP/modules/fedcore $TOP/fedcore
-	build_iwlwifi $arch $TOP/uefi/cht/modules/iwlwifi cht_hr
-	build_bcmdhd $arch $TOP/uefi/cht/modules/bcmdhd PCIE BCM4356
-	build_bcmdhd $arch $TOP/uefi/cht/modules/bcmdhd SDIO BCM43241
+	#build_fedcore $arch $TOP/modules/fedcore $TOP/fedcore
+	#build_iwlwifi $arch $TOP/uefi/cht/modules/iwlwifi cht_hr
+	#build_bcmdhd $arch $TOP/uefi/cht/modules/bcmdhd PCIE BCM4356
+	#build_bcmdhd $arch $TOP/uefi/cht/modules/bcmdhd SDIO BCM43241
 	if $OPT_debug_only; then
 		build_modules $arch \
 			$TOP/uefi/cht/modules/perftools-internal/sepdk/src \
@@ -145,14 +145,14 @@ build_cht() {
 	cd $TOP/$arch || die "Failed to cd to $TOP/${arch}: $?"
 	if ! $OPT_debug_only; then
 		tar -czf src.tgz ../bin/patch ../bin/minigzip \
-			../uefi/cht/*_defconfig \
-			../uefi/cht/patches \
 			../uefi/cht/modules/perftools-external \
 			../uefi/cht/modules/realtek \
-			../uefi/cht/modules/iwlwifi \
-			../modules/fedcore \
 			../build_common.sh \
 			../cht-build.sh
+			#../uefi/cht/*_defconfig \
+			#../uefi/cht/patches \
+			#../uefi/cht/modules/iwlwifi \
+			#../modules/fedcore \
 	fi
 
 	collect_modules $arch
