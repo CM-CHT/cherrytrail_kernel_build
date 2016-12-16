@@ -49,8 +49,8 @@ CCACHE=1	# Enable ccache
 KERNEL_VERSION=$GMIN_KERNEL_VERSION	# See build_common.sh
 
 # Set Build User and Host such that we see (android@cht) in /proc/version
-export KBUILD_BUILD_USER=android
-export KBUILD_BUILD_HOST=cht
+#export KBUILD_BUILD_USER=android
+#export KBUILD_BUILD_HOST=cht
 
 # process_arguments sets the $OPT_x variables
 OPTION_STRING="a:chido:?"
