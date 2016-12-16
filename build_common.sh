@@ -540,9 +540,9 @@ build_fedcore() {
 add_extra_version_string() {
 	declare config=$1
 
-	if [ ! -d $TOP/.git ]; then
+	#if [ ! -d $TOP/.git ]; then
 		return;
-	fi
+	#fi
 
 	dessert_ver=`cat $TOP/DESSERT_VERSION`
 	if [ -z "$dessert_ver" ] || [ ${#dessert_ver} -ne 2 ]; then
