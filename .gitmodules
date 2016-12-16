@@ -1,4 +1,4 @@
 [submodule "linux"]
 	path = linux
 	url = https://github.com/CM-CHT/android_kernel_intel_cherrytrail.git
-	branch = lollipop
+	branch = cm-12.1

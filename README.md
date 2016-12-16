@@ -8,7 +8,7 @@ How to build:
 
 2. Clone Cherry Trail kernel build environment and fetch kernel source as submodule:
 
-        git clone https://github.com/CM-CHT/cherrytrail_kernel_build.git -b lollipop
+        git clone https://github.com/CM-CHT/cherrytrail_kernel_build.git -b cm-12.1
         cd cherrytrail_kernel_build
         git submodule update --init
 
