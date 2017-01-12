@@ -119,12 +119,12 @@ build_cht() {
 	### Building external modules section
 	# Only temporary, this needs to have checks for kernel src,
 	# platform we're building for, etc...
-	build_modules $arch \
-		$TOP/uefi/cht/modules/perftools-external/socperfdk/src \
-		$TOP/uefi/cht/modules/perftools-external/socwatchdk/src \
-		$TOP/uefi/cht/modules/perftools-external/vtunedk/src \
-		$TOP/uefi/cht/modules/perftools-external/vtunedk/src/pax \
-		$TOP/uefi/cht/modules/realtek
+	#build_modules $arch \
+	#	$TOP/uefi/cht/modules/perftools-external/socperfdk/src \
+	#	$TOP/uefi/cht/modules/perftools-external/socwatchdk/src \
+	#	$TOP/uefi/cht/modules/perftools-external/vtunedk/src \
+	#	$TOP/uefi/cht/modules/perftools-external/vtunedk/src/pax \
+	#	$TOP/uefi/cht/modules/realtek
 
 	#build_fedcore $arch $TOP/modules/fedcore $TOP/fedcore
 	#build_iwlwifi $arch $TOP/uefi/cht/modules/iwlwifi cht_hr
@@ -145,12 +145,12 @@ build_cht() {
 	cd $TOP/$arch || die "Failed to cd to $TOP/${arch}: $?"
 	if ! $OPT_debug_only; then
 		tar -czf src.tgz ../bin/patch ../bin/minigzip \
-			../uefi/cht/modules/perftools-external \
-			../uefi/cht/modules/realtek \
 			../build_common.sh \
 			../cht-build.sh
 			#../uefi/cht/*_defconfig \
 			#../uefi/cht/patches \
+			#../uefi/cht/modules/perftools-external \
+			#../uefi/cht/modules/realtek \
 			#../uefi/cht/modules/iwlwifi \
 			#../modules/fedcore \
 	fi
